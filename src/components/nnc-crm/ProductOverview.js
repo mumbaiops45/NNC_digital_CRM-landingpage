@@ -61,16 +61,16 @@ export default function ProductOverview() {
         <div className="po-head mb-16">
           <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: '#0dccad' }}>Product Overview</p>
           <h2 className="text-5xl lg:text-6xl font-black text-white leading-[1.05] mb-5" style={{ letterSpacing: '-0.03em' }}>
-            Meet NNC Digital CRM —<br/>
+            Meet NNC Digital CRM —
             <span style={GT}>The Command Centre</span>
             <span className="text-white"> for Your Business</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl leading-relaxed">
+          <p className="text-gray-400 text-lg leading-relaxed">
             One platform. Every customer. Every deal. Every conversation. Fully organised, fully automated, fully yours.
           </p>
         </div>
 
-        <div className="po-intro max-w-3xl mb-16">
+        <div className="po-intro  mb-16">
           <p className="text-gray-400 leading-relaxed text-sm mb-3">
             NNC Digital CRM is a cloud-based Customer Relationship Management platform purpose-built for small and growing businesses in India. Unlike complex enterprise CRMs that take months to implement and require dedicated IT teams, NNC CRM is up and running in under 5 minutes — and your team will love using it from day one.
           </p>

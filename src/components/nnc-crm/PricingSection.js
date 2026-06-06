@@ -9,62 +9,55 @@ const GT = { background: 'linear-gradient(135deg,#0dccad 0%,#5ce8d8 100%)', Webk
 const PLANS = [
   {
     name: 'Starter', price: '2,999', color: '#60A5FA', bgRgb: '96,165,250',
-    tagline: 'Perfect for solo founders and micro-businesses getting their first CRM.',
+    tagline: 'Perfect for solopreneurs and very small teams.',
+    unit: 'per user/month',
     highlight: false, badge: null,
     features: [
       'Up to 3 users',
-      '5,000 contact records',
-      'Lead & contact management',
-      'Basic sales pipeline (1 pipeline)',
-      'Email integration (Gmail / Outlook)',
-      'Task & activity management',
-      'Basic email templates (10)',
-      'Mobile app (iOS & Android)',
-      'Standard reports (5 dashboards)',
-      'Email support — 48-hour response time',
-      'Free onboarding webinar access',
+      'Up to 1,000 contacts',
+      'Sales pipeline (1)',
+      'Lead capture forms',
+      'Email integration',
+      'Basic automation (5 workflows)',
+      'Mobile app',
+      'Email support',
+      'Standard reports',
     ],
   },
   {
     name: 'Growth', price: '6,999', color: '#0dccad', bgRgb: '13,204,173',
-    tagline: 'Designed for growing teams that need automation and deeper CRM capability.',
+    tagline: 'Our most popular plan — ideal for growing SMBs with an active sales team.',
+    unit: 'per user/month',
     highlight: true, badge: 'Most Popular',
     features: [
       'Up to 10 users',
-      '50,000 contact records',
-      'Advanced lead management with scoring',
-      'Multiple sales pipelines (up to 5)',
-      'Email + WhatsApp Business integration',
-      'Workflow automation (up to 20 active workflows)',
-      'Bulk email with open & click tracking',
-      'Advanced email & SMS templates (unlimited)',
-      'Custom fields and custom deal stages',
-      'Advanced reporting & custom dashboards',
-      'Invoicing & quotation management',
-      'Customer support ticketing (basic)',
-      'Priority support — 8-hour response time',
-      'Dedicated onboarding call + 30-day setup support',
+      'Up to 10,000 contacts',
+      'Multiple pipelines (5)',
+      'All lead capture channels',
+      'Email + WhatsApp integration',
+      'Unlimited automation workflows',
+      'Invoicing & quotations',
+      'Phone + email support',
+      'Custom reports & dashboards',
+      'API access',
     ],
   },
   {
     name: 'Pro', price: '14,999', color: '#8B5CF6', bgRgb: '139,92,246',
-    tagline: 'For established businesses with complex sales operations and large teams.',
+    tagline: 'Full power for established businesses with large teams and complex processes.',
+    unit: 'per user/month',
     highlight: false, badge: null,
     features: [
       'Unlimited users',
-      'Unlimited contact records',
-      'All Growth features, plus:',
-      'Unlimited pipelines and custom modules',
-      'Advanced workflow automation (unlimited)',
-      'AI-powered lead scoring and deal insights',
-      'Full API access and webhooks',
-      'Custom integrations via Zapier and REST API',
-      'Territory management and team hierarchies',
-      'Advanced analytics and custom report builder',
-      'Multi-location and multi-currency support',
+      'Unlimited contacts',
+      'Unlimited pipelines',
+      'All integrations included',
+      'AI-powered lead scoring',
+      'Full invoicing & payment tracking',
       'Dedicated account manager',
-      '4-hour SLA support (phone + chat)',
-      'Custom onboarding and training',
+      '24/7 priority support',
+      'Advanced analytics & forecasting',
+      'Custom onboarding & training',
     ],
   },
 ]
@@ -143,7 +136,7 @@ export default function PricingSection() {
             <span style={GT}>Simple, Honest Pricing.</span><br/>
             <span className="text-white">No Surprises.</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl">All plans include a 14-day free trial — no credit card required. Cancel anytime.</p>
+          <p className="text-gray-400 text-lg max-w-2xl">Start free for 14 days. No credit card required. Upgrade, downgrade, or cancel anytime — no questions asked.</p>
         </div>
 
         <div className="price-row grid md:grid-cols-3 gap-5 lg:gap-6 items-end mb-8">
@@ -163,12 +156,12 @@ export default function PricingSection() {
               )}
               <div className="p-7 pb-5">
                 <p className="text-xs font-black uppercase tracking-widest mb-1" style={{ color: p.color }}>{p.name}</p>
-                <div className="flex items-end gap-1 mb-2">
-                  <span className="text-sm text-gray-500 mb-1.5">₹</span>
+                <div className="flex items-end gap-1 mb-1">
+                  <span className="text-sm text-gray-500 mb-1.5">Rs.</span>
                   <span className="text-4xl font-black text-white">{p.price}</span>
-                  <span className="text-sm text-gray-500 mb-1">/mo</span>
                 </div>
-                <p className="text-xs text-gray-500 leading-snug mb-5">{p.tagline}</p>
+                <p className="text-xs text-gray-500 mb-4">{p.unit}</p>
+                <p className="text-xs text-gray-400 leading-snug mb-5">{p.tagline}</p>
                 <button className={`w-full py-3 text-sm font-bold transition-all duration-200 ${p.highlight ? 'text-black hover:opacity-90' : 'border text-white hover:bg-white/5'}`}
                         style={p.highlight
                           ? { background: `linear-gradient(135deg,${p.color},#5ce8d8)` }

@@ -8,45 +8,45 @@ const GT = { background: 'linear-gradient(135deg,#0dccad 0%,#5ce8d8 100%)', Webk
 
 const PAINS = [
   {
-    num: '01', title: 'Not Knowing Where Your Leads Are',
-    body: "Leads arrive from your website, WhatsApp, phone calls, social media, and referrals — but there's no single place where all of them live. So leads get forgotten, double-handled, or simply lost. Every lost lead is revenue you'll never get back.",
+    num: '01', title: 'Leads Slipping Through the Cracks',
+    body: 'A potential customer enquired last week. Nobody followed up. They bought from your competitor. This happens more than you think.',
     Icon: () => (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0dccad" strokeWidth="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v3l2 2"/></svg>
     ),
   },
   {
-    num: '02', title: 'Forgetting to Follow Up',
-    body: "Your rep was going to call that promising lead back on Tuesday. It's now Friday. The lead has gone cold — or worse, signed with a competitor. Manual follow-ups depend on human memory, and human memory is not a reliable business system.",
+    num: '02', title: 'Your Customer Data is Everywhere',
+    body: 'Contact details in WhatsApp, emails in Gmail, notes in a physical diary, follow-ups in your head. There\'s no single source of truth.',
     Icon: () => (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" strokeWidth="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
     ),
   },
   {
-    num: '03', title: 'No Visibility Into Sales Performance',
-    body: "Is your team actually calling leads? How many deals are in the pipeline right now? What's your average time to close? What's your conversion rate this month vs last? If you can't answer these instantly, you're flying blind.",
+    num: '03', title: 'You Have No Idea Where Deals Stand',
+    body: 'Is that proposal still being considered? Did someone call the client back? Your team has no visibility — and neither do you.',
     Icon: () => (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" strokeWidth="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" strokeWidth="2"><path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19m-6.72-1.07a3 3 0 11-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
     ),
   },
   {
-    num: '04', title: 'Customer History Lives in WhatsApp',
-    body: "A customer calls with a question about their order. The salesperson who handled them is on leave. Nobody else has any context. Every interaction that happened over WhatsApp, email, and phone calls is scattered across devices — not accessible to the team.",
+    num: '04', title: 'Manual Follow-Ups Are Killing Productivity',
+    body: 'Your sales team spends 3+ hours every day on manual reminders, status updates, and copy-pasting data between tools.',
     Icon: () => (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
     ),
   },
   {
-    num: '05', title: 'Manual Reporting Wastes Hours',
-    body: "Every Monday morning, someone spends 3 hours copying numbers from WhatsApp conversations, email threads, and spreadsheets into a report that's outdated by the time it's finished. This is time stolen from actual selling.",
+    num: '05', title: 'Reporting Takes Hours, Not Minutes',
+    body: 'Every Monday you ask for a sales report. It takes half a day to compile data from spreadsheets, email threads, and WhatsApp chats.',
     Icon: () => (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
     ),
   },
   {
-    num: '06', title: 'Losing Customers After the First Sale',
-    body: "You worked hard to acquire that customer. But without a system to track renewals, follow-up schedules, complaints, and upsell opportunities — customers quietly drift away. Customer retention is where the real profit hides.",
+    num: '06', title: 'Scaling Feels Impossible Without Systems',
+    body: 'You want to hire more salespeople, but your current chaos means new hires would just amplify the disorganisation, not fix it.',
     Icon: () => (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EF4444" strokeWidth="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EF4444" strokeWidth="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
     ),
   },
 ]

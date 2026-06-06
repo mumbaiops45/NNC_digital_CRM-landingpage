@@ -8,15 +8,17 @@ const GT = { background: 'linear-gradient(135deg,#0dccad 0%,#5ce8d8 100%)', Webk
 
 const STEPS = [
   {
-    num: '01', color: '#0dccad', bgRgb: '13,204,173',
+    num: '01',
+    color: '#0dccad',
+    bgRgb: '13,204,173',
     title: 'Sign Up & Import Your Data',
-    body: 'Create your NNC CRM account in 60 seconds. Import your existing contacts and leads from a spreadsheet, your old CRM, or Gmail contacts with one click. Our smart import wizard detects duplicates and maps your data automatically.',
+    body: "Create your NNC CRM account in 60 seconds. Import your existing contacts and leads from a spreadsheet, your old CRM, or Gmail contacts with one click. Our smart import wizard detects duplicates and maps your data automatically. You'll have your entire customer database inside NNC CRM before your first cup of tea is finished.",
     bullets: [
-      '60-second account creation — just your name and email',
+      '60-second account creation',
       'One-click import from Excel, Google Sheets, or Gmail',
-      'Smart duplicate detection and automatic data mapping',
+      'Smart duplicate detection and data mapping',
       'Free onboarding call with your dedicated setup specialist',
-      'Pre-built pipeline templates for retail, services, and healthcare',
+      'Pre-built templates for common business types, retail, services, healthcare',
     ],
     Icon: () => (
       <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -24,15 +26,18 @@ const STEPS = [
       </svg>
     ),
   },
+
   {
-    num: '02', color: '#60A5FA', bgRgb: '96,165,250',
+    num: '02',
+    color: '#60A5FA',
+    bgRgb: '96,165,250',
     title: 'Set Up Your Pipeline & Automations',
-    body: 'Customise your sales pipeline stages to match how your business actually sells. Then set up your first automation — for most businesses, this is an automatic follow-up email 24 hours after a new lead arrives.',
+    body: 'Customise your sales pipeline stages to match how your business actually sells. Then set up your first automation, for most businesses, this is an automatic follow-up email 24 hours after a new lead arrives. Our workflow templates for common scenarios mean you can have your first automation running in under 10 minutes.',
     bullets: [
-      'Customise pipeline stages in under 5 minutes — no technical help needed',
+      'Customise pipeline stages in under 5 minutes',
       'Choose from 20+ pre-built workflow automation templates',
       'Connect your Gmail, Outlook, or WhatsApp Business in one click',
-      'Invite your team members and assign roles and permissions',
+      'Invite your team members, assign roles and permissions',
       'Configure your dashboard to show the metrics that matter most to you',
     ],
     Icon: () => (
@@ -43,16 +48,19 @@ const STEPS = [
       </svg>
     ),
   },
+
   {
-    num: '03', color: '#10B981', bgRgb: '16,185,129',
+    num: '03',
+    color: '#10B981',
+    bgRgb: '16,185,129',
     title: 'Capture Leads, Nurture, and Close',
-    body: 'From this point, NNC CRM works for you around the clock. Leads flow in automatically. Follow-ups go out on schedule. Your pipeline updates in real time. Your team gets clear task lists every morning.',
+    body: 'From this point, NNC CRM works for you around the clock. Leads flow in automatically. Follow-ups go out on schedule. Your pipeline updates in real time. Your team gets clear task lists every morning. And you get a live dashboard showing exactly how your business is performing, from total leads this week to revenue closed this month.',
     bullets: [
-      'Leads automatically captured from all connected sources',
-      'Automated nurture sequences keep every prospect warm and engaged',
-      'Real-time pipeline visibility for your entire team, on any device',
-      'Daily task lists ensure no follow-up is ever missed again',
-      'Monthly performance reports delivered straight to your inbox',
+      'Leads automatically captured from all sources',
+      'Automated nurture sequences keep prospects engaged',
+      'Real-time pipeline visibility for your entire team',
+      'Daily task lists ensure no follow-up is ever missed',
+      'Monthly reports delivered straight to your inbox',
     ],
     Icon: () => (
       <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -61,7 +69,6 @@ const STEPS = [
     ),
   },
 ]
-
 export default function HowItWorks() {
   const ref = useRef(null)
 

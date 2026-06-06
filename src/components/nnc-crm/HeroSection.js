@@ -1,8 +1,11 @@
 'use client'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
+
+// Replace with your actual product demo embed URL
+const DEMO_VIDEO_URL = 'https://www.youtube.com/embed/sQD7kaZ5h0s?si=jvWbDcUB7yxj_qp2'
 
 const GT = { background: 'linear-gradient(135deg,#0dccad 0%,#5ce8d8 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }
 
@@ -78,6 +81,13 @@ const TRUST = [
 
 export default function HeroSection() {
   const ref = useRef(null)
+  const [videoOpen, setVideoOpen] = useState(false)
+
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape') setVideoOpen(false) }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [])
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -90,6 +100,31 @@ export default function HeroSection() {
   }, [])
 
   return (
+    <>
+    {/* Video modal */}
+    {videoOpen && (
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-4"
+           style={{ background: 'rgba(0,0,0,0.88)', backdropFilter: 'blur(8px)' }}
+           onClick={() => setVideoOpen(false)}>
+        <div className="relative w-full max-w-4xl" onClick={e => e.stopPropagation()}>
+          <button onClick={() => setVideoOpen(false)}
+                  className="absolute -top-10 right-0 flex items-center gap-1.5 text-sm text-gray-400 hover:text-white transition-colors">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Close
+          </button>
+          <div className="relative overflow-hidden" style={{ paddingBottom: '56.25%', background: '#000', border: '1px solid rgba(13,204,173,0.25)', boxShadow: '0 0 60px rgba(13,204,173,0.15)' }}>
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src={DEMO_VIDEO_URL}
+              title="NNC CRM — 2-Minute Product Demo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </div>
+    )}
+
     <section id="hero" ref={ref} className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden" style={{ background: 'radial-gradient(ellipse 80% 60% at 50% -10%, #0a1e36 0%, #080c14 70%)' }}>
       {/* Background decorations */}
       <div className="absolute inset-0 pointer-events-none">
@@ -103,11 +138,11 @@ export default function HeroSection() {
 
           {/* Left */}
           <div>
-            <div className="hero-item inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold text-white mb-6 border"
+            {/* <div className="hero-item inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold text-white mb-6 border"
                  style={{ background: '#0dccad15', borderColor: '#0dccad40', color: '#5ce8d8' }}>
               <span className="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse"/>
               Customer Relationship Management Software
-            </div>
+            </div> */}
 
             <h1 className="hero-item text-5xl lg:text-6xl font-black leading-tight mb-6" style={{ letterSpacing: '-0.03em' }}>
               <span className="text-white">Stop Losing</span>
@@ -123,13 +158,19 @@ export default function HeroSection() {
               NNC Digital CRM is the all-in-one CRM platform built for small and growing businesses. Capture leads automatically, nurture with smart follow-ups, manage your pipeline visually, and close deals faster — without the complexity of enterprise software.
             </p>
 
-            <div className="hero-item flex flex-col sm:flex-row gap-3 mb-8">
-              <a href="#pricing" className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold text-white transition-all hover:opacity-90 hover:shadow-lg"
-                 style={{ background: 'linear-gradient(135deg,#0dccad,#08a88c)', boxShadow: '0 4px 20px rgba(13,204,173,0.3)' }}>
-                Start Your Free 14-Day Trial
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5}><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
-              <button className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold text-white border border-gray-600 hover:border-gray-400 transition-all hover:bg-white/5">
+            <div className="hero-item flex flex-col sm:flex-row gap-3 mb-8 items-start">
+              <div className="flex flex-col items-start">
+                <a href="#pricing" className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold text-white transition-all hover:opacity-90 hover:shadow-lg"
+                   style={{ background: 'linear-gradient(135deg,#0dccad,#08a88c)', boxShadow: '0 4px 20px rgba(13,204,173,0.3)' }}>
+                  Start Your Free 14-Day Trial
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5}><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <p className="text-xs mt-2 ml-1" style={{ color: '#4b5563' }}>
+                  No credit card required. Setup in under 5 minutes.
+                </p>
+              </div>
+              <button onClick={() => setVideoOpen(true)}
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold text-white border border-gray-600 hover:border-gray-400 transition-all hover:bg-white/5">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                 Watch 2-Minute Demo
               </button>
@@ -162,5 +203,6 @@ export default function HeroSection() {
         </div>
       </div>
     </section>
+    </>
   )
 }

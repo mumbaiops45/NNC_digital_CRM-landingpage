@@ -85,7 +85,7 @@ export default function TestimonialsSection() {
         style={{ background: '#0a1e36', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}
       >
         {/* Header — visible throughout */}
-        <div className="flex-none max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-16 pb-8 lg:pb-12">
+        <div className="flex-none max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-16 pb-8 lg:pb-4">
           <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: '#0dccad' }}>Social Proof</p>
           <h2 className="text-5xl lg:text-6xl font-black leading-[1.05] mb-4" style={{ letterSpacing: '-0.03em' }}>
             <span className="text-white">Real Businesses. </span>
@@ -103,7 +103,7 @@ export default function TestimonialsSection() {
             {TESTIMONIALS.map(t => (
               <div key={t.name} className="flex items-center justify-center px-8"
                    style={{ width: '100vw', minHeight: '55vh' }}>
-                <div className="max-w-4xl w-full p-10 lg:p-14 relative overflow-hidden"
+                <div className="max-w-4xl w-full p-10 lg:px-8 lg:py-6 relative overflow-hidden"
                      style={{
                        background: `rgba(${t.bgRgb},0.08)`,
                        borderLeft: `5px solid ${t.color}`,
