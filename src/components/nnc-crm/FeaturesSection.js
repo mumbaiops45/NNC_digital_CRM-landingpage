@@ -138,7 +138,7 @@ export default function FeaturesSection() {
           <div className="w-72 shrink-0 space-y-0.5 pt-2">
             {FEATURES.map((feat, i) => (
               <button key={feat.num} onClick={() => { setActive(i); activeRef.current = i }}
-                      className={`w-full text-left px-4 py-3 flex items-center gap-3 transition-all duration-200 ${i === active ? 'text-white' : 'text-gray-600 hover:text-gray-400'}`}
+                      className={`w-full text-left px-4 py-3 flex items-center gap-3 transition-all duration-200 ${i === active ? 'text-white' : 'text-gray-600 hover:text-gray-400'} cursor-pointer`}
                       style={i === active ? { background: 'linear-gradient(90deg,rgba(13,204,173,0.1),transparent)', borderLeft: '3px solid #0dccad' } : { borderLeft: '3px solid transparent' }}>
                 <span className="text-xs font-black tabular-nums shrink-0" style={{ color: i === active ? '#0dccad' : '#1e3a5f' }}>{feat.num}</span>
                 <span className="text-sm font-medium leading-snug">{feat.title}</span>

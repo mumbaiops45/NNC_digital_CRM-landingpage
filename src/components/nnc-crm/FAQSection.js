@@ -74,7 +74,7 @@ function FaqItem({ q, a, i }) {
 
   return (
     <div className="faq-item" style={{ borderBottom: '1px solid #1e3a5f' }}>
-      <button className="w-full text-left flex items-start gap-4 py-5" onClick={toggle}>
+      <button className="w-full text-left flex items-start gap-4 py-5 cursor-pointer" onClick={toggle}>
         <span className="shrink-0 text-xs font-black tabular-nums mt-0.5" style={{ color: '#0dccad' }}>
           {String(i + 1).padStart(2, '0')}
         </span>

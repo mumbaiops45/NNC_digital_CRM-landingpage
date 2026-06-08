@@ -140,7 +140,7 @@ export default function IntegrationsSection() {
           <div className="flex gap-2" style={{ minWidth: 'max-content' }}>
             {CATEGORIES.map(c => (
               <button key={c.id} onClick={() => switchCat(c.id)}
-                      className="cat-tab flex items-center gap-2 px-5 py-3 text-xs font-bold transition-all duration-200 shrink-0"
+                      className="cat-tab flex items-center gap-2 px-3 py-3 text-xs font-bold transition-all duration-200 shrink-0 cursor-pointer"
                       style={active === c.id
                         ? {
                             background: `rgba(${c.id === 'email' ? '96,165,250' : c.id === 'marketing' ? '245,158,11' : c.id === 'productivity' ? '16,185,129' : c.id === 'payments' ? '13,204,173' : c.id === 'website' ? '139,92,246' : '239,68,68'},0.12)`,

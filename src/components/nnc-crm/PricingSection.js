@@ -95,7 +95,7 @@ function PricingFaqItem({ q, a }) {
 
   return (
     <div style={{ borderBottom: '1px solid #1e3a5f' }}>
-      <button className="w-full text-left flex items-start gap-3 py-4" onClick={toggle}>
+      <button className="w-full text-left flex items-start gap-3 py-4 cursor-pointer" onClick={toggle}>
         <svg className="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0dccad" strokeWidth="2"
              style={{ transform: open ? 'rotate(45deg)' : 'rotate(0)', transition: 'transform 0.25s' }}>
           <path d="M12 5v14M5 12h14"/>
